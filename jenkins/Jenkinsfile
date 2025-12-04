@@ -5,14 +5,20 @@ pipeline {
     tools {
       maven 'mymaven'
     }
+    environment {
+  name = "krishna"
+}
+
     stages {
         stage('Build') {
             steps {
                 sh 'mvn clean package'
+                echo ${name}
             }
             post {
                 success {
                     archiveArtifacts artifacts: '**/target/*.jar'
+                  
                 }
             }
         }
