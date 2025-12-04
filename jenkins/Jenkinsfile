@@ -3,10 +3,8 @@ pipeline {
         label 'DevServer'
     }
     tools {
-  maven 'mymaven'
-}
-
-
+      maven 'mymaven'
+    }
     stages {
         stage('Build') {
             steps {
@@ -14,7 +12,7 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts artifacts: '/home/ubuntu/home/ubuntu/home/ubuntu/workspace/build-java-aaplication/target/*.jar', 
+                    archiveArtifacts artifacts: '**/target/*.jar'
                 }
             }
         }
