@@ -14,7 +14,7 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts artifacts: '/target/*.jar', fingerprint: true
+                    archiveArtifacts artifacts: '/home/ubuntu/home/ubuntu/home/ubuntu/workspace/build-java-aaplication/target/*.jar', fingerprint: true
                 }
             }
         }
